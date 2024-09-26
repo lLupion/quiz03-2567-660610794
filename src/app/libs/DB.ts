@@ -53,6 +53,13 @@ const originalDB = {
   ],
 };
 
+export interface Database {
+  rooms: Room[];
+  message: Message[];
+  user: User[];
+}
+
+
 const onProduction = process.env.NODE_ENV === "production";
 
 const adapter = onProduction
